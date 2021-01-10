@@ -21,11 +21,11 @@ public class UsuarioBean {
 	private List<Usuario> lista;
 	private String destinoSalvar;
 	
-	public String novo() { 
-		this.destinoSalvar = "usuarioSucesso";
+	public String novo() {
 		this.usuario = new Usuario();
 		this.usuario.setAtivo(true);
-		return "usuario"; 
+		this.destinoSalvar = "usuarioSucesso";
+		return "/publico/usuario"; 
 	}
 	public String editar() {
 		this.confirmarSenha = this.usuario.getSenha();
